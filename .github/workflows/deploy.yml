@@ -22,7 +22,7 @@ jobs:
     - name: Debug SSH Key
       run: |
         ls -l ~/.ssh
-        ssh -i ~/.ssh/id_rsa ubuntu@54.212.22.216 "echo SSH connection successful"
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@54.212.22.216 "echo SSH connection successful"
 
     - name: Deploy to EC2
       run: |
